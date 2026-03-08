@@ -8,103 +8,32 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Install lftp
-        run: |
-          if ! command -v lftp >/dev/null 2>&1; then
-            sudo apt-get update
-            sudo apt-get install -y lftp
-          fi
+        run: sudo apt-get update && sudo apt-get install -y lftp
 
-      - name: Create deploy command file (delta)
-        env:
-          GITHUB_BEFORE: ${{ github.event.before }}
-          GITHUB_SHA: ${{ github.sha }}
-          SFTP_TARGET_PATH: ${{ secrets.SFTP_TARGET_PATH }}
-        run: |
-          set -euo pipefail
-
-          BEFORE="${GITHUB_BEFORE:-}"
-          AFTER="${GITHUB_SHA}"
-          TARGET="${SFTP_TARGET_PATH%/}"
-
-          # First deploy (or manual run) falls back to a full sync.
-          if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
-            cat > deploy.lftp <<EOF
-          mirror --reverse --verbose \
-            --exclude-glob .git/ \
-            --exclude-glob .github/ \
-            --exclude-glob .gitignore \
-            --exclude-glob .gitattributes \
-            --exclude-glob README.md \
-            ./ ${TARGET}
-          EOF
-            exit 0
-          fi
-
-          : > deploy.lftp
-
-          git diff --name-status "$BEFORE" "$AFTER" | while IFS=$'\t' read -r status col2 col3; do
-            case "$status" in
-              D)
-                path="$col2"
-                ;;
-              R*)
-                old_path="$col2"
-                new_path="$col3"
-                # Remove old path on rename, then upload new path.
-                printf "rm -f \"%s/%s\"\n" "$TARGET" "$old_path" >> deploy.lftp
-                path="$new_path"
-                ;;
-              *)
-                path="$col2"
-                ;;
-            esac
-
-            case "$path" in
-              .github/*|.git/*|.gitignore|.gitattributes|README.md)
-                continue
-                ;;
-            esac
-
-            if [ "$status" = "D" ]; then
-              printf "rm -f \"%s/%s\"\n" "$TARGET" "$path" >> deploy.lftp
-              continue
-            fi
-
-            if [ -f "$path" ]; then
-              dir=$(dirname "$path")
-              remote_dir="$TARGET"
-              if [ "$dir" != "." ]; then
-                remote_dir="$TARGET/$dir"
-                printf "mkdir -p \"%s\"\n" "$remote_dir" >> deploy.lftp
-              fi
-              printf "put -O \"%s\" \"%s\"\n" "$remote_dir" "$path" >> deploy.lftp
-            fi
-          done
-
-          if [ ! -s deploy.lftp ]; then
-            echo "# No deploy changes" > deploy.lftp
-          fi
-
-      - name: Upload changed files via SFTP
+      - name: Deploy via SFTP
         env:
           SFTP_HOST: ${{ secrets.SFTP_HOST }}
           SFTP_USER: ${{ secrets.SFTP_USER }}
           SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
           SFTP_TARGET_PATH: ${{ secrets.SFTP_TARGET_PATH }}
         run: |
-          echo "Deploy commands:"
-          cat deploy.lftp
-
           lftp -e "
-          set sftp:auto-confirm yes;
-          open -u ${SFTP_USER},${SFTP_PASSWORD} sftp://${SFTP_HOST}:22;
-          source deploy.lftp;
+          set sftp:auto-confirm yes
+          open -u ${SFTP_USER},${SFTP_PASSWORD} sftp://${SFTP_HOST}
+
+          mirror --reverse \
+            --delete \
+            --verbose \
+            --exclude-glob .git/ \
+            --exclude-glob .github/ \
+            --exclude-glob README.md \
+            ./ ${SFTP_TARGET_PATH}
+
           bye
           "
