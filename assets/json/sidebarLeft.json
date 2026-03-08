@@ -1,0 +1,50 @@
+{
+  "intro": {
+    "title": "BytersLab",
+    "text": "Lerne JavaScript, PHP und HTML & CSS in klaren, kleinen Schritten mit praktischen Beispielen."
+  },
+  "sections": [
+    {
+      "title": "JavaScript",
+      "groups": [
+        {
+          "title": "Einfuhrung",
+          "links": [
+            {
+              "label": "Hallo JavaScript",
+              "href": "/byterslab/js/hello/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "PHP",
+      "groups": [
+        {
+          "title": "Einfuhrung",
+          "links": [
+            {
+              "label": "Hallo PHP",
+              "href": "/byterslab/php/hello/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "HTML & CSS",
+      "groups": [
+        {
+          "title": "Einfuhrung",
+          "links": [
+            {
+              "label": "Hallo HTML & CSS",
+              "href": "/byterslab/html-css/hello/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
