@@ -2,7 +2,7 @@
     <input data-hello-target="name" type="text">
 
     <button data-action="click->hello#greet">
-        Hallo bei PHP
+        Hallo bei JavaScript von Ruben Winkler! Klicke hier, um eine Begrüßung zu erhalten.
     </button>
 
     <span data-hello-target="output">

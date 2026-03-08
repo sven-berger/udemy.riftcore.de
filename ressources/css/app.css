@@ -56,7 +56,7 @@
   border-top-color: rgba(122, 28, 37, 0.22);
 }
 
-.left-sidebar-toggle-btn {
+.sidebar-toggle-btn {
   background: linear-gradient(135deg, #dc3545 0%, #bb2d3b 100%);
   color: #fff;
   border: 0;
@@ -69,15 +69,16 @@
     box-shadow 0.2s ease;
 }
 
-.left-sidebar-toggle-btn:hover,
-.left-sidebar-toggle-btn:focus,
-.left-sidebar-toggle-btn:active {
+.sidebar-toggle-btn:hover,
+.sidebar-toggle-btn:focus,
+.sidebar-toggle-btn:active {
   color: #fff;
   transform: translateY(-1px);
   box-shadow: 0 0.85rem 1.7rem rgba(187, 45, 59, 0.33);
 }
 
-#leftSidebarOffcanvas {
+#leftSidebarOffcanvas,
+#rightSidebarOffcanvas {
   --bs-offcanvas-width: min(88vw, 360px);
 }
 
