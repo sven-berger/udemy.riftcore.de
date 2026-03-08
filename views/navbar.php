@@ -17,7 +17,7 @@
             <div class="row w-100 g-3 align-items-center mt-2 mt-lg-0">
 
                 <div class="col-12 col-lg-4 d-flex justify-content-lg-center">
-                    <ul class="navbar-nav flex-row gap-2 gap-lg-3 mb-0">
+                    <ul class="navbar-nav flex-row gap-2 gap-lg-3 pb-0 pb-lg-2">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Startseite</a>
                         </li>
