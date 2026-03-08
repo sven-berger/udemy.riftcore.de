@@ -45,4 +45,4 @@
                 </aside>
             </div>
             <div class="col-12 col-lg-8 d-flex">
-                <div class="content p-4 rounded-5 ms-3 ms-lg-0 me-3 me-lg-0 flex-grow-1">
+                <div class="content p-4 rounded-5 ms-3 ms-lg-0 flex-grow-1">

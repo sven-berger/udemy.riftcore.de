@@ -15,7 +15,6 @@
         <div class="collapse navbar-collapse w-100" id="navbarSupportedContent">
 
             <div class="row w-100 g-3 align-items-center mt-2 mt-lg-0">
-
                 <div class="col-12 col-lg-4 d-flex justify-content-lg-center">
                     <ul class="navbar-nav flex-row gap-2 gap-lg-3 pb-0 pb-lg-2">
                         <li class="nav-item">
@@ -40,8 +39,6 @@
                         </li>
                     </ul>
                 </div>
-
-
             </div>
             <div class="col-12 col-lg-4 d-flex justify-content-lg-end">
                 <form class="d-flex w-45 navbar-search-form" role="search">
