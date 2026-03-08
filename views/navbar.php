@@ -41,12 +41,13 @@
                     </ul>
                 </div>
 
-                <div class="col-12 col-lg-4 d-flex justify-content-lg-end">
-                    <form class="d-flex w-45 navbar-search-form" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button class="btn btn-outline-light" type="submit">Search</button>
-                    </form>
-                </div>
+
+            </div>
+            <div class="col-12 col-lg-4 d-flex justify-content-lg-end">
+                <form class="d-flex w-45 navbar-search-form" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
             </div>
         </div>
     </div>
