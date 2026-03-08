@@ -30,11 +30,11 @@ jobs:
           mirror --reverse \
             --ignore-time \
             --parallel=5 \
-            --verbose \
+            --verbose=1 \
             --exclude-glob .git/ \
             --exclude-glob .github/ \
+            --exclude-glob .gitignore \
             --exclude-glob README.md \
             ./ ${SFTP_TARGET_PATH}
-
           bye
           "
