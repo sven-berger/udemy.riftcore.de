@@ -2,8 +2,7 @@
   "lecturers": [
     {
       "intro": {
-        "title": "Ruben Winkler",
-        "text": "Lerne JavaScript in klaren, kleinen Schritten mit praktischen Beispielen."
+        "title": "Ruben Winkler"
       },
       "sections": [
         {

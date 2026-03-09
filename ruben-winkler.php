@@ -6,7 +6,7 @@
 
     // Falls keine Seite gesetzt ist, auf index.php?page=index umleiten
     if ($page === '') {
-        header("Location: ../index.php?page=ruben-winkler");
+        header("Location: /ruben-winkler/javascript/intro/variables/");
         exit();
     }
 

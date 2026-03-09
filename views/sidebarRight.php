@@ -55,8 +55,9 @@ $sections = $lecturer['sections'] ?? [];
 </div>
 <?php endif; ?>
 
-<?php foreach (($section['groups'] ?? []) as $group): ?>
 <div class="sidebar-box rounded-5 ps-3 pt-3 pb-5 pe-3 text-white text-start mb-3">
+    <?php foreach (($section['groups'] ?? []) as $group): ?>
+
     <h4 class="content-title"><?= htmlspecialchars($group['title'] ?? '', ENT_QUOTES, 'UTF-8') ?></h4>
     <nav class="sidebar-nav">
         <ul class="list-disc d-grid gap-2 gap-md-2 gap-lg-2 mb-0">
@@ -70,7 +71,8 @@ $sections = $lecturer['sections'] ?? [];
             <?php endforeach; ?>
         </ul>
     </nav>
+    <?php endforeach; ?>
+
 </div>
-<?php endforeach; ?>
 <?php endforeach; ?>
 <?php endforeach; ?>
