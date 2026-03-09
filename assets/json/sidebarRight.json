@@ -3,7 +3,7 @@
     {
       "intro": {
         "title": "Ruben Winkler",
-        "text": "Lerne JavaScript, PHP und HTML & CSS in klaren, kleinen Schritten mit praktischen Beispielen."
+        "text": "Lerne JavaScript in klaren, kleinen Schritten mit praktischen Beispielen."
       },
       "sections": [
         {
@@ -13,11 +13,20 @@
               "links": [
                 {
                   "label": "Variablen",
-                  "href": "/ruben-winkler/js/variables/"
+                  "href": "/ruben-winkler/javascript/intro/variables/"
                 },
                 {
                   "label": "Prompt als Formular-Ersatz",
-                  "href": "/ruben-winkler/js/promt-as-form/"
+                  "href": "/ruben-winkler/javascript/intro/prompt-as-form/"
+                }
+              ]
+            },
+            {
+              "title": "Operatoren",
+              "links": [
+                {
+                  "label": "Mathematische Operatoren",
+                  "href": "/ruben-winkler/javascript/operations/mathematical-operators/"
                 }
               ]
             }
