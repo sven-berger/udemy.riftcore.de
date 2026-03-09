@@ -1,0 +1,61 @@
+{
+  "lecturers": [
+    {
+      "intro": {
+        "title": "Ruben Winkler",
+        "text": "Lerne JavaScript, PHP und HTML & CSS in klaren, kleinen Schritten mit praktischen Beispielen."
+      },
+      "sections": [
+        {
+          "groups": [
+            {
+              "title": "Einführung",
+              "links": [
+                {
+                  "label": "Hallo JavaScript",
+                  "href": "/byterslab/js/hello/"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intro": {
+        "title": "Jannis Seemann",
+        "text": "Lerne JavaScript, PHP und HTML & CSS in klaren, kleinen Schritten mit praktischen Beispielen."
+      },
+      "sections": [
+        {
+          "title": "JavaScript",
+          "groups": [
+            {
+              "title": "Einführung",
+              "links": [
+                {
+                  "label": "Hallo JavaScript",
+                  "href": "/byterslab/js/hello/"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "PHP",
+          "groups": [
+            {
+              "title": "Einführung",
+              "links": [
+                {
+                  "label": "Hallo PHP",
+                  "href": "/byterslab/php/hello/"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

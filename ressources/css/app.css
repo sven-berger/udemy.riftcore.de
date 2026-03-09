@@ -81,6 +81,25 @@
   }
 }
 
+.content-title {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-weight: lighter;
+  font-size: 20px;
+  margin: 30px 0;
+}
+
+.content-title::before,
+.content-title::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #333;
+  margin: 0 10px;
+}
+
 .navbar-dropdown-theme {
   border: 1px solid rgba(220, 53, 69, 0.35);
   border-radius: 0.75rem;
@@ -116,6 +135,14 @@
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
+}
+
+.sidebar-box ul {
+  list-style-type: "► ";
+  ::marker {
+    color: #dc3545;
+    font-size: 1em;
+  }
 }
 
 .sidebar-toggle-btn:hover,

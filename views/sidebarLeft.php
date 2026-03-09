@@ -1,53 +1,56 @@
+<?php
+$sidebarFile = __DIR__ . '/../assets/json/sidebarLeft.json';
+$sidebarData = [];
+
+if (is_file($sidebarFile)) {
+    $jsonContent = file_get_contents($sidebarFile);
+    if ($jsonContent !== false) {
+        $decoded = json_decode($jsonContent, true);
+        if (is_array($decoded)) {
+            $sidebarData = $decoded;
+        }
+    }
+}
+
+$introTitle = $sidebarData['intro']['title'] ?? 'BytersLab';
+$introText = $sidebarData['intro']['text'] ?? '';
+$sections = $sidebarData['sections'] ?? [];
+?>
+
 <div class="sidebar-box rounded-5 p-3 p-md-4 text-danger fw-bold mb-3">
     <div class="d-flex justify-content-center align-items-center">
-        <h2 class="p-0 m-0">BytersLab</h2>
+        <h2 class="p-0 m-0"><?= htmlspecialchars($introTitle, ENT_QUOTES, 'UTF-8') ?></h2>
     </div>
 </div>
 
 <div class="sidebar-box rounded-5 ps-3 pt-3 p-md-4 mb-3">
     <div class="d-block d-md-flex flex-column">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed tenetur voluptatibus optio quos ab quis non
-            eligendi hic quam, ipsam maxime in dolor quia necessitatibus corrupti voluptas voluptates eius repudiandae
-            mollitia porro similique enim pariatur! Earum ex eius, debitis voluptatibus consequatur soluta iure
-            quibusdam
-            perferendis dignissimos cum nisi deserunt doloribus.</p>
+        <p><?= htmlspecialchars($introText, ENT_QUOTES, 'UTF-8') ?></p>
     </div>
 </div>
 
-<div class="sidebar-box rounded-5 ps-3 pt-3 pb-5 text-white text-start mb-3">
-    <h4 class="mb-3 ms-3 mt-2">Einführung</h4>
+<?php foreach ($sections as $section): ?>
+<div class="sidebar-box rounded-5 p-3 p-md-4 text-success fw-bold mb-3">
+    <div class="d-flex justify-content-center align-items-center">
+        <h3 class="p-0 m-0"><?= htmlspecialchars($section['title'] ?? '', ENT_QUOTES, 'UTF-8') ?></h3>
+    </div>
+</div>
+
+<?php foreach (($section['groups'] ?? []) as $group): ?>
+<div class="sidebar-box rounded-5 ps-3 pt-3 pb-5 pe-3 text-white text-start mb-3">
+    <h4 class="content-title"><?= htmlspecialchars($group['title'] ?? '', ENT_QUOTES, 'UTF-8') ?></h4>
     <nav class="sidebar-nav">
         <ul class="list-disc d-grid gap-3 gap-md-5 gap-lg-3 mb-0">
-            <li><a href="/byterslab/js/hello/" class="sidebar-link text-decoration-none">Hallo JavaScript</a>
+            <?php foreach (($group['links'] ?? []) as $link): ?>
+            <li>
+                <a href="<?= htmlspecialchars($link['href'] ?? '#', ENT_QUOTES, 'UTF-8') ?>"
+                    class="sidebar-link text-decoration-none">
+                    <?= htmlspecialchars($link['label'] ?? '', ENT_QUOTES, 'UTF-8') ?>
+                </a>
             </li>
+            <?php endforeach; ?>
         </ul>
     </nav>
 </div>
-
-<div class="sidebar-box rounded-5 p-3 p-md-4 text-success fw-bold mb-3">
-    <div class="d-flex justify-content-center align-items-center">
-        <h3 class="p-0 m-0">PHP</h3>
-    </div>
-</div>
-<div class="sidebar-box rounded-5 ps-3 pt-3 pb-5 text-white text-start mb-3">
-    <h4 class="mb-3 ms-3 mt-2">Einführung</h4>
-    <nav class="sidebar-nav">
-        <ul class="list-disc d-grid gap-3 gap-md-5 gap-lg-3 mb-0">
-            <li><a href="/byterslab/php/hello/" class="sidebar-link text-decoration-none">Hallo PHP</a></li>
-        </ul>
-    </nav>
-</div>
-
-<div class="sidebar-box rounded-5 p-3 p-md-4 text-success fw-bold mb-3">
-    <div class="d-flex justify-content-center align-items-center">
-        <h3 class="p-0 m-0">HTML & CSS</h3>
-    </div>
-</div>
-<div class="sidebar-box rounded-5 ps-3 pt-3 pb-5 text-white text-start mb-3">
-    <h4 class="mb-3 ms-3 mt-2">Einführung</h4>
-    <nav class="sidebar-nav">
-        <ul class="list-disc d-grid gap-3 gap-md-5 gap-lg-3 mb-0">
-            <li><a href="/byterslab/php/hello/" class="sidebar-link text-decoration-none">Hallo PHP</a></li>
-        </ul>
-    </nav>
-</div>
+<?php endforeach; ?>
+<?php endforeach; ?>
