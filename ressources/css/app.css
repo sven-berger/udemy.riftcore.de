@@ -215,3 +215,8 @@
 .content {
   background-color: #e2e8f0 !important;
 }
+
+pre code.hljs {
+  border-radius: 1rem !important;
+  padding: 20px !important;
+}

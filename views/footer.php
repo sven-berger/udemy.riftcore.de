@@ -11,7 +11,7 @@
                 <div class="offcanvas offcanvas-start" tabindex="-1" id="leftSidebarOffcanvas"
                     aria-labelledby="leftSidebarOffcanvasLabel">
                     <div class="offcanvas-header offcanvas-sidebar-header">
-                        <h5 class="offcanvas-title" id="leftSidebarOffcanvasLabel">Angemeldet als <?= $user; ?></h5>
+                        <h5 class="offcanvas-title" id="leftSidebarOffcanvasLabel">Angemeldet als Sven Berger</h5>
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
                             aria-label="Close"></button>
                     </div>
@@ -23,7 +23,7 @@
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="rightSidebarOffcanvas"
                     aria-labelledby="rightSidebarOffcanvasLabel">
                     <div class="offcanvas-header offcanvas-sidebar-header">
-                        <h5 class="offcanvas-title" id="rightSidebarOffcanvasLabel">Angemeldet als <?= $user; ?></h5>
+                        <h5 class="offcanvas-title" id="rightSidebarOffcanvasLabel">Angemeldet als Sven Berger</h5>
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
                             aria-label="Close"></button>
                     </div>

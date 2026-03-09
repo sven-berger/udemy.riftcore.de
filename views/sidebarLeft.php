@@ -40,7 +40,7 @@ $sections = $sidebarData['sections'] ?? [];
 <div class="sidebar-box rounded-5 ps-3 pt-3 pb-5 pe-3 text-white text-start mb-3">
     <h4 class="content-title"><?= htmlspecialchars($group['title'] ?? '', ENT_QUOTES, 'UTF-8') ?></h4>
     <nav class="sidebar-nav">
-        <ul class="list-disc d-grid gap-3 gap-md-5 gap-lg-3 mb-0">
+        <ul class="list-disc d-grid gap-2 gap-md-2 gap-lg-2 mb-0">
             <?php foreach (($group['links'] ?? []) as $link): ?>
             <li>
                 <a href="<?= htmlspecialchars($link['href'] ?? '#', ENT_QUOTES, 'UTF-8') ?>"
