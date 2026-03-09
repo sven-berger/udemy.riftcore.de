@@ -9,7 +9,5 @@ const heimat = "Idstein";
 
 console.log(
   "Hallo, mein Name ist " + gesamterName + ", ich bin ",
-  alter + " Jahre alt und wohne in " + heimat
+  alter + " Jahre alt und wohne in " + heimat,
 );
-
-

@@ -12,8 +12,8 @@
               "title": "Einführung",
               "links": [
                 {
-                  "label": "Hallo JavaScript",
-                  "href": "/byterslab/js/hello/"
+                  "label": "Variablen",
+                  "href": "/ruben-winkler/js/variables/"
                 }
               ]
             }
