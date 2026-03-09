@@ -33,12 +33,12 @@
                 </div>
 
 
-                <script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+                <script src="https://utensils.riftcore.de/bootstrap/js/bootstrap.bundle.min.js"></script>
                 <script type="module" src="/assets/stimulus-bootstrap.js"></script>
 
 
 
-                <script src="/assets/highlight/highlight.min.js"></script>
+                <script src="https://utensils.riftcore.de/highlight/highlight.min.js"></script>
 
                 <script>
 hljs.highlightAll();

@@ -2,24 +2,15 @@
 import { Controller } from "/assets/stimulus.js";
 
 export default class extends Controller {
-  static targets = [
-    "firstName",
-    "middleName",
-    "lastName",
-    "age",
-    "hometown",
-    "output",
-  ];
+  static targets = ["output"];
 
-  createOutput(event) {
-    event.preventDefault();
-
-    const firstName = this.firstNameTarget.value;
-    const middleName = this.middleNameTarget.value;
-    const lastName = this.lastNameTarget.value;
-    const age = this.ageTarget.value;
-    const hometown = this.hometownTarget.value;
-
-    this.outputTarget.textContent = `Hallo, mein Name ist ${firstName} ${middleName} ${lastName}, ich bin ${age} Jahre alt und komme aus ${hometown}.`;
+  connect() {
+    const firstName = "Sven";
+    const middleName = "Oliver";
+    const lastName = "Berger";
+    const fullName = `${firstName} ${middleName} ${lastName}`;
+    const age = 35;
+    const hometown = "Idstein";
+    this.outputTarget.innerHTML = `<div class="alert alert-success">Hallo, mein Name ist ${fullName}, ich bin ${age} Jahre alt und wohne in ${hometown}.</div>`;
   }
 }

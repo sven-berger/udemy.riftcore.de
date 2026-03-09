@@ -1,3 +1,5 @@
+<?php ob_start(); ?>
+
 <!DOCTYPE html>
 <html lang="de">
 
@@ -5,9 +7,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>udemy.riftcore.de</title>
-    <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://utensils.riftcore.de/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://utensils.riftcore.de/highlight/styles/default.min.css">
     <link style="text/css" href="/ressources/css/app.css" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/highlight/styles/default.min.css">
 
 </head>
 
