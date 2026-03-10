@@ -7,7 +7,7 @@
 
     # Support nested lesson paths like /ruben-winkler/javascript/intro/variables/
     # without capturing a trailing slash into the query value.
-    RewriteRule ^([a-zA-Z0-9_-]+)/(javascript|php)/([a-zA-Z0-9_-]+(?:/[a-zA-Z0-9_-]+)*)/?$ $1.php?$2=$3 [QSA,L]
+    RewriteRule ^([a-zA-Z0-9_-]+)/(javascript|php|html-css)/([a-zA-Z0-9_-]+(?:/[a-zA-Z0-9_-]+)*)/?$ $1.php?$2=$3 [QSA,L]
 
     RewriteRule ^([a-zA-Z0-9_-]+)/?$ $1.php [QSA,L]
 </IfModule>

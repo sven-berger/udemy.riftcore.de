@@ -12,7 +12,7 @@
           "links": [
             {
               "label": "Hallo JavaScript",
-              "href": "/byterslab/js/hello/"
+              "href": "/byterslab/javascript/hello/"
             }
           ]
         }
@@ -22,11 +22,15 @@
       "title": "PHP",
       "groups": [
         {
-          "title": "Einführung",
+          "title": "Grundlagen",
           "links": [
             {
               "label": "Hallo PHP",
               "href": "/byterslab/php/hello/"
+            },
+            {
+              "label": "Variablen",
+              "href": "/byterslab/php/basics/variables/"
             }
           ]
         }

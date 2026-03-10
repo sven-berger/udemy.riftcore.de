@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/views/header.php';
 
-$js = $_GET['js'] ?? null;
+$js = $_GET['js'] ?? ($_GET['javascript'] ?? null);
 $php = $_GET['php'] ?? null;
 $page = 'index';
 $basePath = __DIR__ . '/pages/jannis-seemann';
@@ -21,7 +21,7 @@ if ($js !== null) {
     $basePath .= '/php';
 }
 
-if (!preg_match('/^[a-zA-Z0-9_-]+$/', $page)) {
+if (!preg_match('/^[a-zA-Z0-9_-]+(?:\/[a-zA-Z0-9_-]+)*$/', $page)) {
     http_response_code(400);
     echo "<h2>Ungueltige Anfrage</h2>";
     require_once __DIR__ . '/views/footer.php';

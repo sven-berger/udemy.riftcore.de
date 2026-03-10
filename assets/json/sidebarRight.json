@@ -14,7 +14,11 @@
               "links": [
                 {
                   "label": "Hallo JavaScript",
-                  "href": "/byterslab/js/hello/"
+                  "href": "/jannis-seemann/javascript/hello/"
+                },
+                {
+                  "label": "Variablen",
+                  "href": "/jannis-seemann/javascript/basics/variables/"
                 }
               ]
             }
@@ -28,7 +32,7 @@
               "links": [
                 {
                   "label": "Hallo PHP",
-                  "href": "/byterslab/php/hello/"
+                  "href": "/jannis-seemann/php/hello/"
                 }
               ]
             }
