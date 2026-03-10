@@ -26,7 +26,7 @@ JS;
         <div class="mb-3">
             <label for="firstName" class="form-label">Vorname</label>
             <input type="text" class="form-control" id="firstName" name="firstName" data-promptAsForm-target="firstName"
-                placeholder="Gib hier deinen Vornamen ein" required>
+                placeholder="Wie lautet dein Vorname?" required>
         </div>
         <div class="mb-3">
             <label for="middleName" class="form-label">Zweitname</label>
@@ -36,12 +36,12 @@ JS;
         <div class="mb-3">
             <label for="lastName" class="form-label">Nachname</label>
             <input type="text" class="form-control" id="lastName" name="lastName" data-promptAsForm-target="lastName"
-                placeholder="Gib hier deinen Nachnamen ein" required>
+                placeholder="Wie lautet dein Nachname?" required>
         </div>
         <div class="mb-3">
             <label for="age" class="form-label">Alter</label>
             <input type="number" class="form-control" id="age" name="age" data-promptAsForm-target="age"
-                placeholder="Gib hier dein Alter ein" required>
+                placeholder="Wie alt bist du?" required>
         </div>
     </form>
     <div class="mt-4" data-promptAsForm-target="output"></div>
