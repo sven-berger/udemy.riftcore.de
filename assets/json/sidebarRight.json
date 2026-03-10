@@ -2,39 +2,6 @@
   "lecturers": [
     {
       "intro": {
-        "title": "Ruben Winkler"
-      },
-      "sections": [
-        {
-          "groups": [
-            {
-              "title": "Einführung",
-              "links": [
-                {
-                  "label": "Variablen",
-                  "href": "/ruben-winkler/javascript/intro/variables/"
-                },
-                {
-                  "label": "Prompt als Formular-Ersatz",
-                  "href": "/ruben-winkler/javascript/intro/prompt-as-form/"
-                }
-              ]
-            },
-            {
-              "title": "Operatoren",
-              "links": [
-                {
-                  "label": "Mathematische Operatoren",
-                  "href": "/ruben-winkler/javascript/operations/mathematical-operators/"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "intro": {
         "title": "Jannis Seemann",
         "text": "Lerne JavaScript, PHP und HTML & CSS in klaren, kleinen Schritten mit praktischen Beispielen."
       },

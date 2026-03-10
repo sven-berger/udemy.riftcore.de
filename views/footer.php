@@ -1,7 +1,7 @@
                 </div>
                 </div>
-                <div class="col-2 d-none d-lg-flex">
-                    <aside class="me-lg-3 flex-grow-1">
+                <div class="col-2 d-none d-lg-flex pe-0 layout-sidebar-col">
+                    <aside class="flex-grow-1 layout-sidebar-aside">
                         <?php require_once __DIR__ . '/sidebarRight.php'; ?>
                     </aside>
                 </div>
